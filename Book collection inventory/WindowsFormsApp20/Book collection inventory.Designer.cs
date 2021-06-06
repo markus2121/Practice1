@@ -31,9 +31,6 @@ namespace WindowsFormsApp20
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rlDataSet = new WindowsFormsApp20.rlDataSet();
-            this.отечественнаялитератураBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.отечественная_литератураTableAdapter = new WindowsFormsApp20.rlDataSetTableAdapters.отечественная_литератураTableAdapter();
             this.idКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.названиеКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.авторDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +38,9 @@ namespace WindowsFormsApp20
             this.колвоКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.колвоОтданныхКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.колвоОставшихсяКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.отечественнаялитератураBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rlDataSet = new WindowsFormsApp20.rlDataSet();
+            this.отечественная_литератураTableAdapter = new WindowsFormsApp20.rlDataSetTableAdapters.отечественная_литератураTableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -63,8 +63,8 @@ namespace WindowsFormsApp20
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.отечественнаялитератураBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -85,20 +85,6 @@ namespace WindowsFormsApp20
             this.dataGridView1.Size = new System.Drawing.Size(776, 127);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
-            // 
-            // rlDataSet
-            // 
-            this.rlDataSet.DataSetName = "rlDataSet";
-            this.rlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // отечественнаялитератураBindingSource
-            // 
-            this.отечественнаялитератураBindingSource.DataMember = "отечественная_литература";
-            this.отечественнаялитератураBindingSource.DataSource = this.rlDataSet;
-            // 
-            // отечественная_литератураTableAdapter
-            // 
-            this.отечественная_литератураTableAdapter.ClearBeforeFill = true;
             // 
             // idКнигиDataGridViewTextBoxColumn
             // 
@@ -149,6 +135,20 @@ namespace WindowsFormsApp20
             this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Name = "колвоОставшихсяКнигDataGridViewTextBoxColumn";
             this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Width = 115;
             // 
+            // отечественнаялитератураBindingSource
+            // 
+            this.отечественнаялитератураBindingSource.DataMember = "отечественная_литература";
+            this.отечественнаялитератураBindingSource.DataSource = this.rlDataSet;
+            // 
+            // rlDataSet
+            // 
+            this.rlDataSet.DataSetName = "rlDataSet";
+            this.rlDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // отечественная_литератураTableAdapter
+            // 
+            this.отечественная_литератураTableAdapter.ClearBeforeFill = true;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 169);
@@ -156,6 +156,7 @@ namespace WindowsFormsApp20
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 43);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -354,6 +355,7 @@ namespace WindowsFormsApp20
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(321, 54);
             this.textBox8.TabIndex = 20;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // label8
             // 
@@ -398,8 +400,8 @@ namespace WindowsFormsApp20
             this.Text = "Отечественная литература";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.отечественнаялитератураBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

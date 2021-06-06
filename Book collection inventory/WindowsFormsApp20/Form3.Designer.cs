@@ -31,8 +31,15 @@ namespace WindowsFormsApp20
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.rlDataSet1 = new WindowsFormsApp20.rlDataSet1();
+            this.idКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.авторDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.годИзданияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.колвоКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.колвоОтданныхКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.колвоОставшихсяКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.зарубежнаялитератураBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rlDataSet1 = new WindowsFormsApp20.rlDataSet1();
             this.зарубежная_литератураTableAdapter = new WindowsFormsApp20.rlDataSet1TableAdapters.зарубежная_литератураTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -55,16 +62,9 @@ namespace WindowsFormsApp20
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.idКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеКнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.авторDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.годИзданияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.колвоКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.колвоОтданныхКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.колвоОставшихсяКнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.зарубежнаялитератураBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -86,15 +86,63 @@ namespace WindowsFormsApp20
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
-            // rlDataSet1
+            // idКнигиDataGridViewTextBoxColumn
             // 
-            this.rlDataSet1.DataSetName = "rlDataSet1";
-            this.rlDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.idКнигиDataGridViewTextBoxColumn.DataPropertyName = "id книги";
+            this.idКнигиDataGridViewTextBoxColumn.HeaderText = "id книги";
+            this.idКнигиDataGridViewTextBoxColumn.Name = "idКнигиDataGridViewTextBoxColumn";
+            // 
+            // названиеКнигиDataGridViewTextBoxColumn
+            // 
+            this.названиеКнигиDataGridViewTextBoxColumn.DataPropertyName = "Название книги";
+            this.названиеКнигиDataGridViewTextBoxColumn.HeaderText = "Название книги";
+            this.названиеКнигиDataGridViewTextBoxColumn.Name = "названиеКнигиDataGridViewTextBoxColumn";
+            this.названиеКнигиDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // авторDataGridViewTextBoxColumn
+            // 
+            this.авторDataGridViewTextBoxColumn.DataPropertyName = "Автор";
+            this.авторDataGridViewTextBoxColumn.HeaderText = "Автор";
+            this.авторDataGridViewTextBoxColumn.Name = "авторDataGridViewTextBoxColumn";
+            this.авторDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // годИзданияDataGridViewTextBoxColumn
+            // 
+            this.годИзданияDataGridViewTextBoxColumn.DataPropertyName = "Год издания";
+            this.годИзданияDataGridViewTextBoxColumn.HeaderText = "Год издания";
+            this.годИзданияDataGridViewTextBoxColumn.Name = "годИзданияDataGridViewTextBoxColumn";
+            this.годИзданияDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // колвоКнигDataGridViewTextBoxColumn
+            // 
+            this.колвоКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во книг";
+            this.колвоКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во книг";
+            this.колвоКнигDataGridViewTextBoxColumn.Name = "колвоКнигDataGridViewTextBoxColumn";
+            this.колвоКнигDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // колвоОтданныхКнигDataGridViewTextBoxColumn
+            // 
+            this.колвоОтданныхКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во отданных книг";
+            this.колвоОтданныхКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во отданных книг";
+            this.колвоОтданныхКнигDataGridViewTextBoxColumn.Name = "колвоОтданныхКнигDataGridViewTextBoxColumn";
+            this.колвоОтданныхКнигDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // колвоОставшихсяКнигDataGridViewTextBoxColumn
+            // 
+            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во оставшихся книг";
+            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во оставшихся книг";
+            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Name = "колвоОставшихсяКнигDataGridViewTextBoxColumn";
+            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Width = 115;
             // 
             // зарубежнаялитератураBindingSource
             // 
             this.зарубежнаялитератураBindingSource.DataMember = "зарубежная_литература";
             this.зарубежнаялитератураBindingSource.DataSource = this.rlDataSet1;
+            // 
+            // rlDataSet1
+            // 
+            this.rlDataSet1.DataSetName = "rlDataSet1";
+            this.rlDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // зарубежная_литератураTableAdapter
             // 
@@ -118,6 +166,7 @@ namespace WindowsFormsApp20
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(321, 54);
             this.textBox8.TabIndex = 41;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // button5
             // 
@@ -316,54 +365,7 @@ namespace WindowsFormsApp20
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 43);
             this.textBox1.TabIndex = 22;
-            // 
-            // idКнигиDataGridViewTextBoxColumn
-            // 
-            this.idКнигиDataGridViewTextBoxColumn.DataPropertyName = "id книги";
-            this.idКнигиDataGridViewTextBoxColumn.HeaderText = "id книги";
-            this.idКнигиDataGridViewTextBoxColumn.Name = "idКнигиDataGridViewTextBoxColumn";
-            // 
-            // названиеКнигиDataGridViewTextBoxColumn
-            // 
-            this.названиеКнигиDataGridViewTextBoxColumn.DataPropertyName = "Название книги";
-            this.названиеКнигиDataGridViewTextBoxColumn.HeaderText = "Название книги";
-            this.названиеКнигиDataGridViewTextBoxColumn.Name = "названиеКнигиDataGridViewTextBoxColumn";
-            this.названиеКнигиDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // авторDataGridViewTextBoxColumn
-            // 
-            this.авторDataGridViewTextBoxColumn.DataPropertyName = "Автор";
-            this.авторDataGridViewTextBoxColumn.HeaderText = "Автор";
-            this.авторDataGridViewTextBoxColumn.Name = "авторDataGridViewTextBoxColumn";
-            this.авторDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // годИзданияDataGridViewTextBoxColumn
-            // 
-            this.годИзданияDataGridViewTextBoxColumn.DataPropertyName = "Год издания";
-            this.годИзданияDataGridViewTextBoxColumn.HeaderText = "Год издания";
-            this.годИзданияDataGridViewTextBoxColumn.Name = "годИзданияDataGridViewTextBoxColumn";
-            this.годИзданияDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // колвоКнигDataGridViewTextBoxColumn
-            // 
-            this.колвоКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во книг";
-            this.колвоКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во книг";
-            this.колвоКнигDataGridViewTextBoxColumn.Name = "колвоКнигDataGridViewTextBoxColumn";
-            this.колвоКнигDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // колвоОтданныхКнигDataGridViewTextBoxColumn
-            // 
-            this.колвоОтданныхКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во отданных книг";
-            this.колвоОтданныхКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во отданных книг";
-            this.колвоОтданныхКнигDataGridViewTextBoxColumn.Name = "колвоОтданныхКнигDataGridViewTextBoxColumn";
-            this.колвоОтданныхКнигDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // колвоОставшихсяКнигDataGridViewTextBoxColumn
-            // 
-            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.DataPropertyName = "Кол-во оставшихся книг";
-            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.HeaderText = "Кол-во оставшихся книг";
-            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Name = "колвоОставшихсяКнигDataGridViewTextBoxColumn";
-            this.колвоОставшихсяКнигDataGridViewTextBoxColumn.Width = 115;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form3
             // 
@@ -397,8 +399,8 @@ namespace WindowsFormsApp20
             this.Text = "Зарубежная литература";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.зарубежнаялитератураBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rlDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

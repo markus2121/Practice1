@@ -101,6 +101,21 @@ namespace WindowsFormsApp20
             }
         }
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int s = Convert.ToInt32(textBox1.Text);
+            }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("Неверный формат данных");
+            }
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
